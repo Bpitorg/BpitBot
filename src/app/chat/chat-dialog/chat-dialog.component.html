@@ -5,7 +5,7 @@
       <img src="assets/logo.png" width="50px"> Angular Chatbot
     </mat-toolbar>
 
-    <div class="messages">
+    <div class="messages" id="messages">
 
       <ng-container *ngFor="let message of messages | async">
 
@@ -19,10 +19,9 @@
       </ng-container>
 
     </div>
-
     <div class="send-message" (click)="messageInput.click()">
       <mat-form-field floatPlaceholder="never">
-        <input matInput #messageInput [(ngModel)]="formValue" (keyup.enter)="sendMessage()" 
+        <input matInput #messageInput [(ngModel)]="formValue" (keyup.enter)="sendMessage()"
           placeholder="Ask me about Angular..." autofocus autocomplete="off">
       </mat-form-field>
     </div>
