@@ -1,5 +1,7 @@
 .wrapper {
-    margin: 2vh 15vw;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
     border: 1px solid #ccc;
     box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.50);
 }
@@ -17,10 +19,28 @@
 .messages {
     overflow: auto;
     padding: 64px 0;
-    height: 60vh;
+    background: #fff;
+    height: 40vh;
     overflow-y: scroll;
 }
 
+@media only screen and (max-width: 449px) {
+  .messages {
+      overflow: auto;
+      padding: 64px 0;
+      width:auto;
+      height: 60vh;
+      overflow-y: scroll;
+  }
+  .wrapper {
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+      border: 1px solid #ccc;
+      box-shadow: 10px 10px 40px -10px rgba(0, 0, 0, 0.50);
+  }
+
+}
 .message-row {
     padding: 0 16px;
     margin: 8px;
