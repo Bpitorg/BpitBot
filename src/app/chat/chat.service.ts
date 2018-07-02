@@ -16,7 +16,7 @@ export class Message {
 @Injectable()
 export class ChatService {
 
-  readonly token = environment.dialogflow.angularBot;
+  readonly token = environment.dialogflow.bpitbot;
   readonly client = new ApiAiClient({ accessToken: this.token });
 
   conversation = new BehaviorSubject<Message[]>([]);
